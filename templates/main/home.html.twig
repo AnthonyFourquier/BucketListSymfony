@@ -1,0 +1,13 @@
+{% extends "main/base.html.twig " %}
+{% set title="Bucket-List - Accueil" %}
+
+{% block main %}
+<div class="title">
+    {{title}}
+</div>
+{% include "helper/_flash.html.twig" %}
+<img class="img" src="{{ asset('img/img-background.jpg')}}" alt="nackground Bucket-List"/>
+<p class="textBackground">
+    After a live ...
+</p>
+{% endblock %}

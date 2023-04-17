@@ -1,0 +1,33 @@
+{% extends 'main/base.html.twig' %}
+
+{% set title="Bucket-List - Register" %}
+
+{% block main %}
+<link rel="stylesheet" href="{{ asset('css/formulaire.css') }}">
+<div class="title">
+    {{title}}</div>
+
+    <div class="login-box">
+
+    <h2>Register</h2>
+
+    {{ form_start(registrationForm) }}
+    <div class="user-box">
+        {{ form_row(registrationForm.email) }}
+    </div>
+
+        <div class="user-box">
+            {{ form_row(registrationForm.username) }}
+        </div>
+
+        <div class="user-box">
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Password'
+            }) }}
+        </div>
+     
+        <button type="submit" class="validation">Register</button>
+    {{ form_end(registrationForm) }}
+
+</div>   
+{% endblock %}

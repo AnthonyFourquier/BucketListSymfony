@@ -1,0 +1,26 @@
+{% extends "main/base.html.twig " %}
+{% set title="Bucket-List - Affichage Categorie" %}
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{% block main %}
+<link rel="stylesheet" href="{{ asset('css/card.css') }}">
+	<div class="title" style="margin-top: 5%;">
+		{{title}}</div>
+      <div style="margin-top: 5%;">
+        <h3>Liste des catégories : </h3>
+        <br>
+        {% for category in categories %}
+                <a href="displayCategorieDetail/{{category.id}}" class="lien">
+                    {{category.name}}
+                </a>
+        {% endfor %}
+        {# TODO ajouter des image pr categorie et afficher 
+            -rajouter dans la base, dans l'entity et dans le form d'ajout de categorie 
+            <div>
+            <img class="" src="{{ asset('img/travel.jpg')}}" alt="image categorie traval adventure">
+        </div> #}
+    </div>
+{% endblock %}

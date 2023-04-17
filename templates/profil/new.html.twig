@@ -1,0 +1,10 @@
+{% extends 'main/base.html.twig' %}
+
+{% block title %}Mon Profil{% endblock %}
+
+{% block main %}
+    <h1 style="margin-top: -5%;margin-bottom: 5%;">Mon Profil</h1>
+	{% include "helper/_flash.html.twig" %}
+    {{ include('profil/_form.html.twig') }}
+
+{% endblock %}

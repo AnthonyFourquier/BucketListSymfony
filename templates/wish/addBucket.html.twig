@@ -1,0 +1,42 @@
+{% extends "main/base.html.twig " %}
+{% set title="Bucket-List - Ajouter" %}
+
+
+{% block main %}
+	<link rel="stylesheet" href="{{ asset('css/formulaire.css') }}">
+	<div class="title">
+		{{title}}</div>
+
+	{# message avec condition si il existe "response"   #}
+	{# {% if response != null   %}
+		    <div style="color: white; background-color: green;width: 50%;margin-left: 25%;">
+		    {{response}}
+		   </div>
+		    {% endif %} #}
+	<div class="login-box">
+		<h2>Formulaire</h2>
+
+		{{ form_start(bucketListForm) }}
+		<div class="user-box">
+			{{ form_row(bucketListForm.name) }}
+		</div>
+
+		<div class="user-box">
+			{{ form_row(bucketListForm.content) }}
+		</div>
+
+		<div class="user-box">
+			{{ form_row(bucketListForm.image) }}
+		</div>
+
+		<div class="user-box">
+			{{ form_row(bucketListForm.categorie) }}
+		</div>
+		<button class="validation" type="submit">Valider
+		</button>
+
+		{{ form_end(bucketListForm) }}
+
+	</div>
+{% endblock %}
+

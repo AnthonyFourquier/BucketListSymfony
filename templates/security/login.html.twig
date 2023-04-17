@@ -1,0 +1,50 @@
+{% extends 'main/base.html.twig' %}
+
+{% set title="Bucket-List - Login" %}
+
+{% block main %}
+<link rel="stylesheet" href="{{ asset('css/formulaire.css') }}">
+<div class="title">
+    {{title}}</div>
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+    <div class="login-box">
+
+    <h2 >Please sign in</h2>
+    <div class="user-box">
+        <label for="inputEmail">Email</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="off" required autofocus>
+
+    </div>   
+
+    <div class="user-box">
+        <label for="inputPassword">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="off" required>
+    </div>
+   
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+
+         <div class="user-box" style="color: white;">
+            <a href="{{ path('app_forgot_password_request') }}"> reset password </a>
+        </div>
+    <button class="validation" type="submit">
+        Sign in
+    </button>
+</form>
+</div>
+{% endblock %}

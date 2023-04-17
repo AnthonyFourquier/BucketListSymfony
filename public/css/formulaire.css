@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .login-box {
+    margin-top: 15.5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: black;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:-25px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .validation {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 20px;
+    letter-spacing: 4px
+  }
+  
+  .validation:hover  {
+    background: white;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .validation {
+    border: 2px solid #fff;
+    border-radius: 5px;
+  }
+
+  .title {
+    margin-top: -7%;
+    letter-spacing: 3px;
+  }
+
+  .containerInscription {
+    padding-top : 20px;
+  }
+
+  .inscription {
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .profilContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  

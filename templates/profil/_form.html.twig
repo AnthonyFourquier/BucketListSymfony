@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="{{ asset('css/formulaire.css') }}">
+<div class="login-box" style="width: 80%;">
+	<h2 style="margin-bottom: 10%;">Profil</h2>
+	{{ form_start(form) }}
+	<div class="profilContainer">
+		<div class="user-box">
+			{{ form_row(form.name) }}
+		</div>
+
+		<div class="user-box">
+			{{ form_row(form.lastname) }}
+		</div>
+
+		<div class="user-box">
+			{{ form_row(form.image) }}
+		</div>
+
+		<div class="user-box">
+			{{ form_row(form.description) }}
+		</div>
+	</div>
+
+
+	<div class="profilContainer">
+		<div class="user-box">
+			{{ form_row(form.mobile) }}
+		</div>
+		<div class="user-box">
+			{{ form_row(form.email) }}
+		</div>
+
+		<div class="user-box">
+			{{ form_row(form.username) }}
+		</div>
+
+		<div class="user-box">
+			{{ form_row(form.address) }}
+		</div>
+	</div>
+
+	<button class="validation" style="margin-top: 5%;">{{ button_label|default('Save') }}</button>
+	{{ form_end(form) }}
+
+</div>
